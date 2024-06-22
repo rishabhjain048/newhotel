@@ -1,0 +1,53 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/nav.ejs') %>
+
+<section class="bg-gray-200">
+    <header class="bg-blue-500 text-white p-6">
+      <h1 class="text-3xl font-bold text-center">About Us</h1>
+    </header>
+    <main class="container mx-auto p-8">
+      <section class="bg-white shadow-md rounded-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold mb-4">Our Story</h2>
+        <p class="text-gray-700 mb-4">
+          Welcome to our Hotel Management System. We started our journey in 2021 with the mission to provide the best services to our customers. Our team is dedicated to ensuring a pleasant and memorable stay for all our guests.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Our hotel management system is designed to simplify the booking process, manage customer data, and ensure seamless communication between our staff and guests. We strive to create a home away from home for all our visitors.
+        </p>
+      </section>
+      <section class="bg-white shadow-md rounded-lg p-6 mb-8">
+        <h2 class="text-2xl font-bold mb-4">Our Team</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <!-- Team Member Example -->
+          <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+            <img class="w-full h-48 object-cover rounded-t-lg" src="https://via.placeholder.com/150" alt="Team Member">
+            <div class="p-4">
+              <h3 class="text-xl font-bold">John Doe</h3>
+              <p class="text-gray-700">CEO & Founder</p>
+            </div>
+          </div>
+          <!-- Repeat above block for more team members -->
+        </div>
+      </section>
+      <section class="bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+        <p class="text-gray-700 mb-4">
+          If you have any questions or need assistance, feel free to reach out to us. Our team is here to help you 24/7.
+        </p>
+        <p class="text-gray-700 mb-4">
+          <strong>Email:</strong> support@hotelmanagement.com
+        </p>
+        <p class="text-gray-700 mb-4">
+          <strong>Phone:</strong> (123) 456-7890
+        </p>
+        <p class="text-gray-700 mb-4">
+          <strong>Address:</strong> 123 Main St, Anytown, USA
+        </p>
+      </section>
+    </main>
+    <footer class="bg-blue-500 text-white p-6 text-center">
+      &copy; 2023 Hotel Management System. All rights reserved.
+    </footer>
+</section>
+
+<%- include('./partials/footer.ejs') %>

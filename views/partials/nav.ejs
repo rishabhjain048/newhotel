@@ -1,0 +1,30 @@
+<div class="w-full h-[10vh] bg-zinc-400 mx-auto text-2xl font-bold text-white flex justify-between items-center">
+    
+   
+    <div class="text-white-900 hover:bg-green-300 rounded-lg p-2 focus:shadow-outline mx-3">LOHotels</div>
+
+    <div>
+<% if(User) { %>
+    <a class="text-white-900 hover:bg-green-300 rounded-lg p-2 focus:shadow-outline" href="/User/profile">Home</a>
+    <a class="text-white-900 hover:bg-green-300 rounded-lg p-2 focus:shadow-outline" href="/create">Create</a>
+    <a class="text-white-900 hover:bg-green-300 rounded-lg p-2 focus:shadow-outline" href="/library">Library</a>
+    
+    <% }else { %>
+        <a class="text-white-900 hover:bg-green-300 rounded-lg p-2 focus:shadow-outline" href="/">Home</a>
+
+        <% } %>
+           
+    <a class="text-white-900 hover:bg-green-300 rounded-lg p-2 focus:shadow-outline" href="/about">About</a>
+    <a class="text-white-900 hover:bg-green-300 rounded-lg p-2 focus:shadow-outline" href="/help">Help</a>
+</div>
+<div>
+    <% if(User) { %>
+        <a class="text-white-900 hover:bg-green-300 rounded-lg p-2 focus:shadow-outline mx-3" href="/logout">Logout</a>
+        <% }else { %>
+            <a class="text-white-900 hover:bg-green-300 rounded-lg p-2 focus:shadow-outline mx-3" href="/login">Login</a>
+    
+            <% } %>
+ 
+
+</div>
+</div>

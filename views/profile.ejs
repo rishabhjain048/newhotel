@@ -1,0 +1,39 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/nav.ejs') %>
+
+<section class="bg-gray-100">
+    <div class="container mx-auto p-8">
+      
+      <h1 class="text-4xl font-bold mb-8 text-center">User Profiles</h1>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- User Card Example -->
+         <%allguest.forEach((allguest) => {%>
+          <a href="/guestData/<%= allguest._id %>">
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img class="w-full h-48 object-fit object-center " src="/images/<%=allguest.profile%>" alt="Profile Picture">
+            <div class="p-4">
+              <h2 class="text-xl font-bold"><%=allguest.name%></h2>
+              <p class="text-gray-700"><%=allguest.phone%></p>
+              <p class="text-gray-700"><%=allguest.email%></p>
+              <p class="text-gray-700"><%=allguest.address%></p>
+            </div>
+            <div>
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><a href="/guestupdate/<%= allguest._id %>"> Update</a></button>
+              <button  class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" ><a href="/delete-guest/<%= allguest._id %>">Delete</a></button>
+            </div>
+          </div>
+        </a>
+           <% })%>
+        
+        
+        <!-- Repeat above block for more user cards -->
+      </div>
+    </div>
+    <div class="w-full h-[13vh] bg-zinc-100  text-2xl font-bold  flex justify-center items-center mt-2">
+        <div class="w-[8vh] h-[8vh] text-red-500 rounded-[50%] border-2 border-blue-500 py-3 px-3">
+           <a href="/create">➕</a>
+        </div>
+    </div>
+  </section>
+
+<%- include('./partials/footer.ejs') %>

@@ -1,0 +1,16 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/nav.ejs') %>
+
+<section class="flex items-center justify-center h-[90vh] bg-gray-200">
+  <div class="text-center bg-white p-10 rounded-lg shadow-lg">
+    <h1 class="text-6xl font-bold mb-8">Welcome to Our Hotel Management System</h1>
+    <p class="text-3xl mb-10 ">Please login or register to continue.</p>
+    <div class="flex justify-center space-x-4">
+            <a href="/register" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Register</a>
+            <a href="/login" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Login</a>
+
+    </div>
+  </div>
+</section>
+
+<%- include('./partials/footer.ejs') %>

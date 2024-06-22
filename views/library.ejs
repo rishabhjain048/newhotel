@@ -1,0 +1,50 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/nav.ejs') %>
+<section class="bg-gray-100">
+    <header class="bg-blue-500 text-white p-6">
+      <h1 class="text-3xl font-bold text-center">Guest List</h1>
+    </header>
+    <main class="container mx-auto p-8">
+      <section class="bg-white shadow-md rounded-lg p-6">
+        <table class="min-w-full divide-y divide-gray-200">
+          <thead class="bg-gray-50">
+            <tr>
+              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Profile</th>
+              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone Number</th>
+              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+              <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Address</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <%allguest.forEach((allguest) => {%>
+              <tr>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <img class="h-14 w-14 rounded-full" src="/images/<%=allguest.profile%>" alt="<%= allguest.name %>">
+                </td>
+                <td class="px-6 py-4  whitespace-nowrap">
+                  <div class="text-sm font-medium text-gray-900"><%= allguest.name %></div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="text-sm text-gray-500"><%= allguest.phone %></div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="text-sm text-gray-500"><%= allguest.email %></div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="text-sm text-gray-500"><%= allguest.address %></div>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer class="bg-blue-500 text-white p-6 text-center">
+      &copy; 2023 Hotel Management System. All rights reserved.
+    </footer>
+</section>
+
+
+
+<%- include('./partials/footer.ejs') %>
